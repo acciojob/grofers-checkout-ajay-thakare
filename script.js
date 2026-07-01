@@ -4,7 +4,7 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-	const prices = document.querySelectorAll('.price');
+	const prices = document.querySelectorAll('.prices');
 
 	let arr = Array.from(prices);
 
@@ -14,7 +14,7 @@ const getSum = () => {
 	}
 
 	const tr = document.createElement('tr');
-	tr.innerHTML = `<td colspan='2'>${total}</td>`;
+	tr.innerHTML = `<td id='ans' colspan='2'>${total}</td>`;
 
     const table = document.getElementsByTagName("table");
 
