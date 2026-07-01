@@ -4,7 +4,22 @@ document.body.appendChild(getSumBtn);
 
 const getSum = () => {
 //Add your code here
-  
+	const prices = document.querySelectorAll('.price');
+
+	let arr = Array.from(prices);
+
+	let total = 0;
+	for(let ele of arr){
+		total += Number(ele.textContent);
+	}
+
+	const tr = document.createElement('tr');
+	tr.innerHTML = `<td colspan='2'>${total}</td>`;
+
+    const table = document.getElementsByTagName("table");
+
+    table[0].append(tr);
+	
 };
 
 getSumBtn.addEventListener("click", getSum);
